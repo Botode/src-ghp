@@ -1,0 +1,12 @@
+root = true
+
+[*]
+ident_style = space
+ident_style = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8
+
+[*.{json,yml}]
+ident_style = 2

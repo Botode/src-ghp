@@ -1,0 +1,26 @@
+{
+  "name": "botode.github.io",
+  "version": "1.0.0",
+  "description": "site",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Botode/Botode.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Botode/Botode.github.io/issues"
+  },
+  "homepage": "https://github.com/Botode/Botode.github.io#readme"
+}
