@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.arc(x, y, d / 2, 0, 2 * Math.PI);
     ctx.fill();
   }
+  
   function drawLine({ x0, y0, x1, y1, type = 0, c = [0, 0, 0, 255] }) {
     switch (type) {
       case 1:
