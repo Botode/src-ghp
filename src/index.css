@@ -1,3 +1,5 @@
+/** @format */
+
 *,
 *::before,
 *::after {
@@ -27,5 +29,3 @@ body {
   border: 1px solid black;
   background-color: white;
 }
-
-

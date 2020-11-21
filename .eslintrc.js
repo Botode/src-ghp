@@ -1,11 +1,9 @@
 /** @format */
-/* eslint-disable no-undef */
 
 module.exports = {
   env: {
-    browser: true,
+    node: true,
     es2021: true,
-    // commonjs: true,
   },
   extends: ['eslint:recommended', 'prettier'],
   parserOptions: {
@@ -14,7 +12,7 @@ module.exports = {
   },
   plugins: ['prettier'],
   rules: {
-    indent: ['error', 2, { SwitchCase: 0 }],
+    indent: ['error', 2, { SwitchCase: 1 }],
     'max-len': [
       'error',
       {
@@ -34,4 +32,13 @@ module.exports = {
     semi: ['error', 'always'],
     'prettier/prettier': ['error'],
   },
+  overrides: [
+    {
+      files: ['src/*'],
+      env: {
+        node: false,
+        browser: true,
+      },
+    },
+  ],
 };

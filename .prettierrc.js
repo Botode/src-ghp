@@ -10,7 +10,7 @@ module.exports = {
   bracketSpacing: true,
   quoteProps: 'as-needed',
   arrowParens: 'always',
-  requirePragma: true,
+  // requirePragma: true,
   insertPragma: true,
   proseWrap: 'preserve',
   endOfLine: 'lf',

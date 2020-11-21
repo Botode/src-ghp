@@ -1,3 +1,5 @@
+/** @format */
+
 document.addEventListener('DOMContentLoaded', () => {
   const canv = document.getElementById('canv');
   canv.width = window.innerWidth - 40;
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.arc(x, y, d / 2, 0, 2 * Math.PI);
     ctx.fill();
   }
-  
+
   function drawLine({ x0, y0, x1, y1, type = 0, c = [0, 0, 0, 255] }) {
     switch (type) {
       case 1:
@@ -58,22 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.closePath();
     ctx.stroke();
   }
-  function drawText({ id, x, y, type = 0, c = [0, 0, 0, 255] }) {
-    switch (type) {
-      case 1:
-        c = [0, 255, 0, 255];
-        break;
-      case 2:
-        c = [255, 0, 0, 255];
-        break;
-      case 3:
-        c = [0, 0, 255, 255];
-        break;
-    }
-    ctx.fillStyle = `rgba(${c[0]},${c[1]},${c[2]},${c[3]})`;
-    ctx.font = '12px serif';
-    ctx.fillText(id, x + 5, y);
-  }
+  // function drawText({ id, x, y, type = 0, c = [0, 0, 0, 255] }) {
+  //   switch (type) {
+  //     case 1:
+  //       c = [0, 255, 0, 255];
+  //       break;
+  //     case 2:
+  //       c = [255, 0, 0, 255];
+  //       break;
+  //     case 3:
+  //       c = [0, 0, 255, 255];
+  //       break;
+  //   }
+  //   ctx.fillStyle = `rgba(${c[0]},${c[1]},${c[2]},${c[3]})`;
+  //   ctx.font = '12px serif';
+  //   ctx.fillText(id, x + 5, y);
+  // }
   function generatePoints(n, width, height) {
     const points = [];
     for (let i = 0; i < n; i += 1) {
@@ -181,25 +183,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let curPoint = startPoint;
     let nextPoint = startPoint;
     let pos = 0;
-    do {
-      pos = findMinDist(dists, curPoint, pos);
-      if (pos == -1) {
-        route.push(endPoint);
-        break;
-      }
+    while ((pos = findMinDist(dists, curPoint, pos)) != -1) {
       nextPoint = dists[pos][0] == curPoint ? dists[pos][1] : dists[pos][0];
-      if (nextPoint == endPoint) {
-        pos += 1;
-        continue;
-      }
-      if (route.indexOf(nextPoint) != -1) {
-        pos += 1;
-        continue;
-      }
-      curPoint = nextPoint;
-      route.push(nextPoint);
-      pos = 0;
-    } while (true);
+      if (nextPoint != endPoint && route.indexOf(nextPoint) == -1) {
+        curPoint = nextPoint;
+        route.push(nextPoint);
+        pos = 0;
+      } else pos += 1;
+    }
+    route.push(endPoint);
     return route;
   }
   function displayPoints(points) {
