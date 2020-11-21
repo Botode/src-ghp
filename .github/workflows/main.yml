@@ -27,7 +27,9 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.PTOKEN }}
-          BRANCH: gh-pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.PTOKEN }}
+          BRANCH: master
           FOLDER: build
+          REPOSITORY_NAME: Botode/Botode.github.io
           CLEAN: true
