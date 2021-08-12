@@ -27,9 +27,8 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACCESS_TOKEN: ${{ secrets.DEV }}
+          token: ${{ secrets.DEV }}
           branch: master
           folder: build
-          REPOSITORY_NAME: Botode/Botode.github.io
+          repository-name: Botode/Botode.github.io
           clean: true
