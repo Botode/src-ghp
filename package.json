@@ -2,13 +2,14 @@
   "name": "botode.github.io",
   "version": "1.0.0",
   "description": "site",
-  "main": "index.js",
-  "dependencies": {},
+  "private": true,
   "devDependencies": {
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/Botode/Botode.github.io/issues"
   },
-  "homepage": "https://github.com/Botode/Botode.github.io#readme"
+  "homepage": "https://github.com/Botode/Botode.github.io#readme",
+  "dependencies": {
+    "paper": "^0.12.15"
+  }
 }
