@@ -29,6 +29,6 @@ jobs:
         with:
           token: ${{ secrets.DEV }}
           branch: master
-          folder: build
+          folder: dist
           repository-name: Botode/Botode.github.io
           clean: true
