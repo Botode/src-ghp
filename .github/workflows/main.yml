@@ -26,7 +26,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          token: ${{ secrets.DEV }}
+          token: ${{ secrets.PAGES }}
           branch: master
           folder: dist
           repository-name: Botode/Botode.github.io
