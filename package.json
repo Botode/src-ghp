@@ -17,7 +17,7 @@
     "favicons-webpack-plugin": "^6.0.0-alpha.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
-    "node-sass": "^7.0.3",
+    "node-sass": "^9.0.0",
     "prettier": "^2.7.1",
     "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",
