@@ -12,7 +12,7 @@
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "express": "^4.21.2",
+    "express": "^4.22.1",
     "favicons": "^7.1.5",
     "favicons-webpack-plugin": "^6.0.0-alpha.1",
     "html-webpack-plugin": "^5.5.0",
